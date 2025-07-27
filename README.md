@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Study Buddy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An AI-powered lecture summarizer that helps students understand complex topics by providing summaries, explanations, and interactive quiz questions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Lecture Summarization**: Upload lecture images or paste text content
+- **Concept Explanations**: Get detailed explanations of difficult concepts
+- **Real-world Examples**: Understand concepts through practical applications
+- **Interactive Quizzes**: Test your knowledge with multiple-choice questions
+- **Image Support**: Upload lecture slides, notes, or diagrams for analysis
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (version 14 or higher)
+- npm or yarn
+- Google Gemini API key
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd study-buddy
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Set up environment variables:
+   - Create a `.env` file in the root directory
+   - Add your Google Gemini API key:
+```
+REACT_APP_GEMINI_API_KEY=your_api_key_here
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Development Mode
+```bash
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Production Build
+```bash
+npm run build
+```
+This creates an optimized production build in the `build` folder.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Text Input Mode**: Paste your lecture text content
+2. **Image Upload Mode**: Upload lecture slides, notes, or diagrams
+3. Click "Summarize Lecture" to generate:
+   - Summary of the content
+   - Explanations of difficult concepts
+   - Real-world examples
+   - Interactive quiz questions
+4. Answer quiz questions to test your understanding
+5. Generate more questions if needed
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React.js
+- Tailwind CSS
+- Google Gemini AI API
+- Lottie animations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```
+src/
+├── components/          # React components
+├── hooks/              # Custom React hooks
+├── services/           # API services
+├── utils/              # Utility functions
+├── constants/          # App constants
+├── styles/             # Global styles
+└── assets/             # Images and animations
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
